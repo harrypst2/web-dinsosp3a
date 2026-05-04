@@ -90,6 +90,12 @@
 			padding-top: 18px;
 			padding-bottom: 18px;
 		}
+		#topnav.nav-sticky .navigation-menu .has-submenu .menu-arrow {
+			top: 23px;
+		}
+		#topnav.nav-sticky .navigation-menu > .has-submenu:hover .menu-arrow {
+			top: 26px !important;
+		}
 
 		/* ── Blob Background Effect (Ported from SvelteKit) ── */
 		@keyframes blob-downward {
