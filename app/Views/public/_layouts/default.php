@@ -51,6 +51,10 @@
 			position: relative;
 			overflow-x: hidden;
 			background: #ffffff;
+			font-family: 'Plus Jakarta Sans', sans-serif !important;
+		}
+		h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .title, .heading {
+			font-family: 'Plus Jakarta Sans', sans-serif !important;
 		}
 		#topnav {
 			background: transparent !important;

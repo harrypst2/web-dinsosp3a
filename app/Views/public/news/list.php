@@ -15,7 +15,7 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-12 text-center">
 				<div class="page-next-level">
-					<h2 class="fw-bold mb-3"> <?= $page ?> </h2>
+					<h4 class="title"> <?= $page ?> </h4>
 					<p class="text-muted mb-0">Temukan berita terbaru dan informasi terkini seputar layanan kami.</p>
 					
 					<div class="hero-search">

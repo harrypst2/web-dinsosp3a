@@ -13,7 +13,7 @@
 							<li class="breadcrumb-item"><a href="<?= base_url("category/" . $category["slug"]) ?>"><?= ucwords(strtolower($category["name"])) ?></a></li>
 						</ul>
 					</nav>
-					<h2 class="fw-bold mb-3" style="max-width: 800px; margin: 0 auto;"> <?= $article->title ?> </h2>
+					<h4 class="title" style="max-width: 800px; margin: 0 auto;"> <?= $article->title ?> </h4>
 					
 					<div class="news-meta mt-4 d-flex justify-content-center align-items-center gap-4 text-muted">
 						<div class="d-flex align-items-center">
