@@ -1,0 +1,13 @@
+*
+/*
+
+!.gitignore
+!avatars/
+!files/
+!galleries/
+!partners/
+!photos/
+!sliders/
+!thumbnails/
+
+!partners/*
