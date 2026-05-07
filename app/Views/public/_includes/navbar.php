@@ -15,6 +15,12 @@
 			</a>
 		</div>
 
+		<ul class="buy-button list-inline mb-0">
+			<li class="list-inline-item mb-0">
+				<a href="https://siyansos.purwakartakab.go.id/" target="_blank" class="btn btn-primary">Lapor</a>
+			</li>
+		</ul>
+
 		<div class="menu-extras">
 			<div class="menu-item">
 				<a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">

@@ -96,6 +96,24 @@
 		#topnav.nav-sticky .navigation-menu > .has-submenu:hover .menu-arrow {
 			top: 26px !important;
 		}
+		#topnav .buy-button {
+			display: flex;
+			align-items: center;
+			height: 60px;
+			margin-bottom: 0;
+			float: right;
+			transition: all 0.3s ease;
+		}
+		#topnav .buy-button .btn {
+			transition: all 0.3s ease;
+		}
+		#topnav.nav-sticky .buy-button {
+			height: 55px;
+		}
+		#topnav.nav-sticky .buy-button .btn {
+			padding: 5px 14px;
+			font-size: 13px;
+		}
 
 		/* ── Blob Background Effect (Ported from SvelteKit) ── */
 		@keyframes blob-downward {
