@@ -181,6 +181,8 @@
 		</div>
 	</div>
 </section>
+
+
 <?= $this->endSection() ?>
 
 <?= $this->section("features") ?>
@@ -356,6 +358,8 @@
 <?= $this->endSection() ?>
 
 <?= $this->section("content") ?>
+
+
 <section class="section">
 	<div class="container">
 		<div class="row justify-content-center">

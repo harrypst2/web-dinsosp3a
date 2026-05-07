@@ -165,6 +165,84 @@
 		section.bg-half.bg-light {
 			background-color: #faebe3 !important;
 		}
+
+		/* Accessibility Widget */
+		.accessibility-btn {
+			position: fixed;
+			bottom: 80px;
+			left: 20px;
+			width: 50px;
+			height: 50px;
+			background: #2f55d4;
+			color: white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 24px;
+			cursor: pointer;
+			z-index: 999;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+			transition: all 0.3s ease;
+		}
+		.accessibility-btn:hover {
+			transform: scale(1.1);
+			background: #2444ad;
+		}
+		.accessibility-menu {
+			position: fixed;
+			bottom: 140px;
+			left: 20px;
+			background: white;
+			border-radius: 12px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+			padding: 15px;
+			z-index: 998;
+			display: none;
+			width: 220px;
+			border: 1px solid #eee;
+		}
+		.accessibility-menu.active {
+			display: block;
+			animation: fadeInUp 0.3s ease;
+		}
+		.accessibility-item {
+			margin-bottom: 15px;
+		}
+		.accessibility-item:last-child {
+			margin-bottom: 0;
+		}
+		.accessibility-item label {
+			display: block;
+			font-size: 13px;
+			font-weight: 600;
+			margin-bottom: 8px;
+			color: #333;
+		}
+		.accessibility-controls {
+			display: flex;
+			gap: 8px;
+		}
+		.accessibility-controls button {
+			flex: 1;
+			border: 1px solid #ddd;
+			background: #f8f9fa;
+			padding: 8px;
+			border-radius: 6px;
+			font-size: 14px;
+			cursor: pointer;
+			transition: all 0.2s;
+		}
+		.accessibility-controls button:hover {
+			background: #eee;
+		}
+		.grayscale {
+			filter: grayscale(100%) !important;
+		}
+		@keyframes fadeInUp {
+			from { opacity: 0; transform: translateY(10px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
 	</style>
 	<?= $this->renderSection("stylesheet") ?>
 </head>
@@ -194,11 +272,67 @@
 	<?= view_cell('App\Cells\PartnersCell::display') ?>
 	<?= $this->include("public/_includes/footer") ?>
 
+	<!-- Accessibility Widget -->
+	<div class="accessibility-btn" id="accBtn" title="Aksesibilitas">
+		<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" style="color: white;">
+			<path d="M12,2C13.1,2 14,2.9 14,4C14,5.1 13.1,6 12,6C10.9,6 10,5.1 10,4C10,2.9 10.9,2 12,2M21,9H15V22H13V16H11V22H9V9H3V7H21V9Z" />
+		</svg>
+	</div>
+	<div class="accessibility-menu" id="accMenu">
+		<div class="accessibility-item">
+			<label>Ukuran Teks</label>
+			<div class="accessibility-controls">
+				<button onclick="changeFontSize(-1)">A-</button>
+				<button onclick="resetFontSize()">Reset</button>
+				<button onclick="changeFontSize(1)">A+</button>
+			</div>
+		</div>
+		<div class="accessibility-item">
+			<label>Tampilan</label>
+			<div class="accessibility-controls">
+				<button onclick="toggleGrayscale()">Hitam Putih</button>
+			</div>
+		</div>
+	</div>
+
 	<a href="javascript:void(0)" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top">
 		<i data-feather="arrow-up" class="icons"></i>
 	</a>
 
 	<script src="//cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+	<script>
+		// Accessibility Script
+		const accBtn = document.getElementById('accBtn');
+		const accMenu = document.getElementById('accMenu');
+		let fontSize = 100;
+
+		accBtn.addEventListener('click', () => {
+			accMenu.classList.toggle('active');
+		});
+
+		function changeFontSize(delta) {
+			fontSize += delta * 10;
+			if (fontSize < 80) fontSize = 80;
+			if (fontSize > 150) fontSize = 150;
+			document.body.style.fontSize = fontSize + '%';
+		}
+
+		function resetFontSize() {
+			fontSize = 100;
+			document.body.style.fontSize = '100%';
+		}
+
+		function toggleGrayscale() {
+			document.body.classList.toggle('grayscale');
+		}
+
+		// Close menu when clicking outside
+		document.addEventListener('click', (e) => {
+			if (!accBtn.contains(e.target) && !accMenu.contains(e.target)) {
+				accMenu.classList.remove('active');
+			}
+		});
+	</script>
 	<script src="<?= base_url("assets/js/bootstrap.bundle.min.js") ?>"></script>
 	<script src="<?= base_url("assets/js/swiper.min.js") ?>"></script>
 	<script src="<?= base_url("assets/js/tobii.min.js") ?>"></script>
