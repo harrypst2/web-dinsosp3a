@@ -114,6 +114,21 @@
 			padding: 5px 14px;
 			font-size: 13px;
 		}
+		.btn-orange {
+			background: linear-gradient(135deg, #E67E22 0%, #D35400 100%) !important;
+			border: none !important;
+			color: #fff !important;
+			border-radius: 50px !important;
+			font-weight: 600 !important;
+			box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3) !important;
+			transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+		}
+		.btn-orange:hover, .btn-orange:focus, .btn-orange:active {
+			transform: translateY(-2px) scale(1.03);
+			background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%) !important;
+			box-shadow: 0 8px 25px rgba(230, 126, 34, 0.4) !important;
+			color: #fff !important;
+		}
 
 		/* ── Blob Background Effect (Ported from SvelteKit) ── */
 		@keyframes blob-downward {

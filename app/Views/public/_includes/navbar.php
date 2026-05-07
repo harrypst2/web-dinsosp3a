@@ -17,7 +17,7 @@
 
 		<ul class="buy-button list-inline mb-0 d-none d-lg-flex">
 			<li class="list-inline-item mb-0">
-				<a href="https://siyansos.purwakartakab.go.id/" target="_blank" class="btn btn-primary d-flex align-items-center">
+				<a href="https://siyansos.purwakartakab.go.id/" target="_blank" class="btn btn-orange d-flex align-items-center">
 					<img src="<?= base_url("assets/images/pengaduan.webp") ?>" class="me-2" style="height: 30px; width: auto;" alt="Pengaduan">
 					Pengaduan
 				</a>
@@ -52,7 +52,7 @@
 				<li><a href="<?= base_url("files") ?>" class="sub-menu-item">Berkas</a></li>
 				<li><a href="<?= base_url("contact") ?>" class="sub-menu-item">Kontak</a></li>
 				<li class="d-lg-none">
-					<a href="https://siyansos.purwakartakab.go.id/" target="_blank" class="sub-menu-item d-flex align-items-center">
+					<a href="https://siyansos.purwakartakab.go.id/" target="_blank" class="sub-menu-item d-flex align-items-center" style="color: #E67E22 !important;">
 						<img src="<?= base_url("assets/images/pengaduan.webp") ?>" class="me-2" style="height: 20px; width: auto;" alt="Pengaduan">
 						Pengaduan
 					</a>
