@@ -17,7 +17,10 @@
 
 		<ul class="buy-button list-inline mb-0">
 			<li class="list-inline-item mb-0">
-				<a href="https://siyansos.purwakartakab.go.id/" target="_blank" class="btn btn-primary">Lapor</a>
+				<a href="https://siyansos.purwakartakab.go.id/" target="_blank" class="btn btn-primary d-flex align-items-center">
+					<img src="<?= base_url("assets/images/pengaduan.webp") ?>" class="me-2" style="height: 30px; width: auto;" alt="Pengaduan">
+					Pengaduan
+				</a>
 			</li>
 		</ul>
 
