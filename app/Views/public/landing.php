@@ -90,6 +90,11 @@
 		position: relative;
 		z-index: 2;
 	}
+	@media (max-width: 768px) {
+		.features-absolute {
+			margin-top: -40px;
+		}
+	}
 	.swiper-pagination {
 		bottom: 40px !important;
 	}
